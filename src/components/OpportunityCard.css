@@ -1,0 +1,30 @@
+/* Style card code */
+
+.card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  color: #2a2a2a;
+}
+
+.card p {
+  margin: 4px 0;
+}
+
+.card .date {
+  font-size: 0.9rem;
+  color: #777;
+}
