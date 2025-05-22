@@ -681,3 +681,329 @@ h2 {
     background: rgba(44,62,80,0.13);
   }
 }
+
+
+
+/* Mobile-Specific Adjustments (under 480px) */
+@media (max-width: 480px) {
+  #root {
+    padding: 0.5rem;
+  }
+  
+  .app {
+    max-width: 100%;
+    width: 100%;
+    margin: 20px 0;
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+  
+  /* Filter Bar */
+  .filter-bar {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 12px;
+    margin-bottom: 20px;
+    width: calc(100% - 2rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .search-container,
+  .dropdown-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  .search-input {
+    padding: 12px 36px 12px 12px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  /* Cards */
+  .card {
+    padding: 16px;
+    margin-bottom: 16px;
+    width: calc(100% - 2rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .card:hover {
+    transform: none; /* Remove hover effects on mobile */
+  }
+  
+  /* Modal */
+  .modal-content {
+    width: 90vw;
+    max-width: 90vw;
+    padding: 1.5rem 1rem;
+  }
+  
+  /* Forms */
+  .add-opportunity-form-wrapper,
+  .profile-page-wrapper {
+    width: 90vw;
+    max-width: 90vw;
+    margin: 20px auto 0 auto;
+    padding: 1.5rem 1rem;
+  }
+  
+  /* Profile */
+  .profile-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  /* Navigation */
+  .hamburger-menu {
+    top: 12px;
+    left: 12px;
+    width: 36px;
+    height: 36px;
+  }
+  
+  .hamburger-menu .bar {
+    width: 20px;
+    height: 2.5px;
+    margin: 2.5px 0;
+  }
+  
+  .side-menu {
+    width: 80vw;
+    max-width: 300px;
+  }
+}
+
+/* Very Small Devices (under 360px) */
+@media (max-width: 360px) {
+  .app {
+    padding: 1.2rem 0.8rem;
+  }
+  
+  h1 {
+    font-size: 1.4rem;
+  }
+  
+  .card {
+    padding: 12px;
+    width: calc(100% - 1.6rem);
+  }
+  
+  .search-input {
+    padding: 10px 32px 10px 10px;
+  }
+  
+  .dropdown-selected {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .modal-content,
+  .add-opportunity-form-wrapper,
+  .profile-page-wrapper {
+    width: 95vw;
+    padding: 1.2rem 0.8rem;
+  }
+}
+
+/* Landscape Orientation Adjustments */
+@media (max-width: 480px) and (orientation: landscape) {
+  .app {
+    margin: 10px auto;
+    padding: 1rem;
+    max-width: 95vw;
+  }
+  
+  .filter-bar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 8px;
+  }
+  
+  .search-container,
+  .dropdown-container {
+    min-width: 45%;
+  }
+  
+  .card {
+    width: calc(100% - 1rem);
+  }
+}
+
+/* Touch Target Sizes */
+button, .card, .dropdown-selected, .dropdown-item {
+  min-height: 44px;
+}
+
+/* Prevent Zoom on Input Focus */
+@media (max-width: 480px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Text Wrapping */
+.card, .modal-content, .feature-card {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+
+/* Extreme Mobile Optimization (for devices under 320px) */
+@media (max-width: 320px) {
+  #root {
+    padding: 0.25rem;
+  }
+
+  .app {
+    padding: 1rem 0.75rem;
+    margin: 10px 0;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  /* Filter Bar - Extreme compact */
+  .filter-bar {
+    padding: 8px;
+    gap: 0.5rem;
+    margin-bottom: 15px;
+  }
+
+  .search-input {
+    padding: 8px 30px 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  .search-icon {
+    right: 10px;
+    font-size: 1.1em;
+  }
+
+  .dropdown-selected {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    min-width: 120px;
+  }
+
+  /* Cards - Ultra compact */
+  .card {
+    padding: 12px 10px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  .card .date {
+    font-size: 0.8rem;
+  }
+
+  /* Forms - Tiny adjustments */
+  .add-opportunity-form-wrapper,
+  .profile-page-wrapper {
+    padding: 1rem 0.75rem;
+    margin-top: 20px;
+  }
+
+  .opportunity-form input,
+  .opportunity-form select,
+  .opportunity-form textarea {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Navigation - Micro sizing */
+  .hamburger-menu {
+    top: 8px;
+    left: 8px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .hamburger-menu .bar {
+    width: 18px;
+    height: 2px;
+    margin: 2px 0;
+  }
+
+  .side-menu {
+    width: 85vw;
+    padding-top: 40px;
+  }
+
+  .side-menu li {
+    font-size: 0.95rem;
+    padding: 12px 0;
+  }
+
+  /* Modal - Shrink further */
+  .modal-content {
+    padding: 1rem 0.75rem;
+  }
+
+  .modal-content button {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  /* Profile - Micro avatar */
+  .profile-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 2.5rem;
+  }
+
+  .profile-details p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Special cases for super narrow devices */
+@media (max-width: 280px) {
+  .filter-bar {
+    flex-direction: column;
+  }
+  
+  .search-container,
+  .dropdown-container {
+    min-width: 100%;
+  }
+
+  .card {
+    padding: 10px 8px;
+  }
+
+  .opportunity-form {
+    gap: 8px;
+  }
+}
